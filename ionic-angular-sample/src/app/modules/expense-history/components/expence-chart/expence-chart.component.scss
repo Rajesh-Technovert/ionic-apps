@@ -1,0 +1,21 @@
+#chart{
+  width: 100%;
+  ion-card{
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: none;
+    ion-title{
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .tot-income{
+      text-align: center;
+      font-size: 18px;
+      color: rgba(44, 44, 44, 0.8);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+  }
+}

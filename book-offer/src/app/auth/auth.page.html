@@ -1,0 +1,46 @@
+
+
+<ion-content class="ion-padding">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <ion-grid>
+
+
+      <ion-row >
+        <ion-col size-md="6" offset-md="3">
+          <ion-list>
+            <ion-item >
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" ngModel name="email" required email #emailCtrl="ngModel"></ion-input>
+            </ion-item>
+              <p class="error" *ngIf="(!emailCtrl.valid) && emailCtrl.touched" color="danger">email should be valid</p>
+            <ion-item >
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" ngModel name="password" required password minlength="8" #pwdCtrl="ngModel"></ion-input>
+            </ion-item>
+            <p class="error" *ngIf="(!pwdCtrl.valid) && pwdCtrl.touched" color="danger">password required 8 characters atleast</p>
+
+          </ion-list>
+        </ion-col>
+
+      </ion-row>
+      <ion-row>
+          <ion-col size-md="6" offset-md="3">
+            <ion-button (click)="onSwitchAuthMode()" fill="clear" color="primary" expand="full" >
+              Switch to {{!isLogin? 'login' : 'signup'}}
+            </ion-button>
+            <ion-button type="submit" (click)="onLogin()"  color="primary" expand="full" [disabled]="!f.valid">
+              {{isLogin ? 'Login' : 'SignUp'}}
+            </ion-button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+
+  <!-- <div class="ion-text-center">
+    <ion-spinner name="bubbles" *ngIf="isLoading" ></ion-spinner>
+  </div> -->
+
+
+</ion-content>

@@ -1,0 +1,24 @@
+<div id="add-expense" style="background-color: white; border-color: 2px solid #1d808c">
+
+
+  <div style="text-align: right;" >
+      <ion-icon name="close" style="font-size: 25px;" color="secondary"></ion-icon>
+  </div>
+
+    <!-- <div style="text-align: center;" >
+      <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg">
+    </div> -->
+    <h3 class="ion-margin-top ion-text-center"  style="color: #1d808c" >
+      Sample
+    </h3>
+    <h5 class="ion-text-center"   style="color: #1d808c" >
+      test
+    </h5>
+
+  <div style="margin-top: 30px;text-align: center;" *ngIf="button == 'CLOSE'">
+    <ion-button color="secondary" style="font-size: 20px;width: 140px;height: 56px;--border-radius: 140px !important;font-weight: 600;text-transform: none;" >Click</ion-button>
+  </div>
+  <div style="margin-top: 30px;text-align: center;" *ngIf="button == 'REDEEM'" >
+    <ion-button color="secondary" style="font-size: 20px;width: 140px;height: 56px;--border-radius: 140px !important;font-weight: 600;text-transform: none;">Click</ion-button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+ion-item{
+  border-radius: 50px;
+  height: 55px;
+  --highlight-height: 0px;
+
+  ion-input{
+    font-size: 18px;
+    --padding-top: 20px;
+    --padding-bottom: 15px;
+  }
+}

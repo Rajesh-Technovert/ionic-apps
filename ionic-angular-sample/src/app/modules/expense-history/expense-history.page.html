@@ -1,0 +1,32 @@
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Transactions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="toggle-item" lines="none">
+    <div class="toggle-bar">
+      <ion-buttons slot="start">
+        <ion-button (click)="changeTab(0)" [class]="getClass(0)">
+
+          Income
+        </ion-button>
+        <ion-button (click)="changeTab(1)" [class]="getClass(1)">
+
+          Expense
+        </ion-button>
+      </ion-buttons>
+
+    </div>
+  </ion-item>
+  <ion-item lines="none">
+     <app-expence-chart></app-expence-chart>
+  </ion-item>
+  <ion-list>
+
+  </ion-list>
+</ion-content>
+

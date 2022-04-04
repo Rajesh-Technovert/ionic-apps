@@ -1,0 +1,63 @@
+
+<ion-content padding>
+
+  <ion-item lines="none">
+    <ion-button slot="end" (click)="onBack()" expand="block" fill="clear" shape="round" >
+      <ion-icon  name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-list  lines="none" id="exp-form">
+    <ion-item>
+      <h3>Add Expenses</h3>
+    </ion-item>
+    <ion-item id="exp-price">
+      <ion-input type="text"  [(ngModel)]="transition.expense"></ion-input>
+    </ion-item>
+    <ion-item class="exp-form-item">
+      <ion-icon name="filter-circle-outline"></ion-icon>
+      <ion-label>{{transition.category}}</ion-label>
+      <ion-select [(ngModel)]="transition.category" >
+        <ion-select-option value="Food" >Food</ion-select-option>
+        <ion-select-option value="Entertainment">Entertainment</ion-select-option>
+        <ion-select-option value="Travel">Travel</ion-select-option>
+        <ion-select-option value="Shoping">Shoping</ion-select-option>
+        <ion-select-option value="Recharges">Recharges</ion-select-option>
+        <ion-select-option value="Home Rents">Home Rents</ion-select-option>
+        <ion-select-option value="Others">Others</ion-select-option>
+      </ion-select>
+      <!-- <ion-input type="text" placeholder="Category" [(ngModel)]="transition.category"></ion-input> -->
+    </ion-item>
+    <ion-item class="exp-form-item">
+      <ion-icon name="clipboard-outline"></ion-icon>
+      <ion-input type="text" placeholder="Note" [(ngModel)]="transition.note"></ion-input>
+    </ion-item>
+    <ion-item class="exp-form-item">
+      <ion-icon name="calendar-clear-outline"></ion-icon>
+
+      <ion-input
+
+    id="date"
+    placeholder="Date"
+    class="ion-text-start"
+     [(ngModel)] = "transition.date"
+  ></ion-input>
+      <ion-popover trigger="date" size="cover" alignment="center" [dismissOnSelect]="true">
+        <ng-template>
+          <ion-datetime
+            presentation="date"
+            [(ngModel)]="date"
+
+            locale="sl-SI"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar id="btm-container" >
+
+      <ion-button style="position: absolute; bottom: 10px;  z-index: 2;" expand="full" type="submit" id="save-btn" (click)="save()">Save</ion-button>
+  </ion-toolbar>
+</ion-footer>

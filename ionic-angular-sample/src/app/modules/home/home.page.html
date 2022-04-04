@@ -1,0 +1,36 @@
+<ion-header id="h-header" class="ion-no-border">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-avatar (click)="showProfile()">
+        <img src='https://avatars.githubusercontent.com/u/39063904?v=4' />
+      </ion-avatar>
+      <ion-label >
+        <p>Hello,</p>
+        <h4>Rajesh</h4>
+      </ion-label>
+      <ion-button slot="end"  expand="block" fill="clear" shape="round">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <app-expense-card [transitions]="transitions"></app-expense-card>
+  <ion-row class="transition-header" >
+    Transitions <span> View All</span>
+  </ion-row>
+  <ion-list class="ion-no-border" *ngFor="let item of transitions" >
+
+   <app-transition-tile *ngIf="item.category"  [transition]="item"></app-transition-tile>
+   <ion-item-options side="end">
+    <button ion-button (click)="delete(item)">
+        <ion-icon name="trash"></ion-icon>Delete
+    </button>
+</ion-item-options>
+  </ion-list>
+
+
+
+</ion-content>

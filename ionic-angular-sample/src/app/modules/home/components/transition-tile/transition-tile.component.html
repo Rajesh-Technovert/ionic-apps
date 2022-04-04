@@ -1,0 +1,25 @@
+<ion-item lines="none" >
+  <ion-card *ngIf="transition"  class="ion-no-border">
+    <ion-card-content>
+      <ion-row>
+
+          <div class="item-image">
+            <ion-icon slot="start" [src]="getImage(transition.category)"></ion-icon>
+
+          </div>
+          <div>
+            <h3>{{transition.category}}</h3>
+            <p>{{transition.note}}</p>
+
+          </div>
+
+
+        <div class="item-spare">
+          <h2 >{{transition.expense}}</h2>
+            <p>{{getDateString()}}</p>
+        </div>
+
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-item>

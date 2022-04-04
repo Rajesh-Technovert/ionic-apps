@@ -1,0 +1,37 @@
+<ion-item lines="none" class="ion-text-center">
+  <ion-card class="expense-card">
+    <ion-card-content>
+      <h4>Total Balance</h4>
+      <h6>$ {{getTotalBal()}}</h6>
+      <div class="exp-det">
+        <div class="">
+          <div class="exp-icon">
+            <ion-icon name="arrow-down-outline" class="icon-in"></ion-icon>
+          </div>
+          <div class="exp-data">
+            <h3>Income</h3>
+            <p>{{getIncome()}}</p>
+
+        </div>
+
+        </div>
+          <div>
+            <div class="exp-icon">
+              <ion-icon name="arrow-up-outline" class="icon-out"></ion-icon>
+            </div>
+            <div  class="exp-data">
+              <h3>Expense</h3>
+              <p>{{getExpense()}}</p>
+            </div>
+          </div>
+
+
+
+
+
+      </div>
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-item>

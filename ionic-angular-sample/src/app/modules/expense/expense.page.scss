@@ -1,0 +1,85 @@
+ion-content{
+  --ion-background-color: #f3f5f7;
+  ion-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    h3{
+      font-size: 18px;
+      color: rgb(100, 98, 98);
+    }
+
+    .exp-form-item{
+        width: 80%;
+        --background: white !important;
+        height: 80px;
+        border-radius: 10px;
+        --highlight-color-focused: transparent;
+        ion-input{
+          --background: white;
+          text-decoration: none;
+          color: rgb(119, 115, 115);
+          padding-left: 10px !important;
+        }
+        ion-label{
+          padding-left: 10px;
+        }
+
+
+    }
+    #exp-price{
+      width: 64%;
+      --background: white !important;
+      margin-top: 24px;
+      margin-bottom: 40px;
+      height: 80px;
+      border-radius: 20px;
+      background-color: white;
+      --highlight-color-focused: transparent;
+
+      padding: 10px 20px 0px 20px;
+      ion-input{
+        --background: linear-gradient(120deg, rgb(23, 102, 248) 0%, rgb(143, 119, 231) 18.5%, rgb(147, 77, 238) 33.33%, rgb(240, 88, 139) 80%) !important;
+        padding: 0px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        --placeholder-color: #000
+      }
+
+
+
+    }
+  }
+
+
+}
+.select-text{
+  display: none;
+}
+ion-footer{
+
+  --ion-background-color: #f3f5f7;
+  #btm-container{
+    ion-button{
+      --background: linear-gradient(120deg, rgb(23, 102, 248) 0%, rgb(143, 119, 231) 18.5%, rgb(147, 77, 238) 33.33%, rgb(240, 88, 139) 80%) !important;
+      width: 80%;
+      height: 50px;
+      position: inherit !important;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20% !important;
+
+      color: #fff;
+    }
+
+  }
+
+}
+
+
+
